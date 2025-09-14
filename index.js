@@ -26,10 +26,10 @@ app.get('/api/hello', function (req, res) {
 
 //mis cambios
 app.get('/api/whoami', function (req, res) {
-  const ipadress = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const ipaddress = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   const language = req.get('Accept-Language');
   const software = req.get('User-Agent');
-  res.json({ ipadress, language, software });
+  res.json({ ipaddress, language, software });
 });
 
 // listen for requests :)
